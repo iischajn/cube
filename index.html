@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'self' 'unsafe-inline'; script-src * 'self' 'unsafe-inline' 'unsafe-eval'"> -->
     <meta name="format-detection" content="telephone=no">
@@ -23,102 +24,178 @@
     <link rel="stylesheet" href="./static/lib/framework7.3dpanels.min.css">
     <link rel="stylesheet" href="./static/lib/font-awesome.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- Status bar overlay for fullscreen mode-->
     <div class="statusbar-overlay"></div>
     <!-- Panels overlay-->
     <div class="panel-overlay"></div>
     <div class="panel panel-left panel-reveal">
-      <div class="content-block">
-        <p>Left panel content goes here</p>
-      </div>
+        <div class="content-block">
+            <p>Left panel content goes here</p>
+        </div>
     </div>
     <div class="panel panel-right panel-reveal">
-      <div class="content-block">
-        <p>Right panel content goes here</p>
-      </div>
-    </div>
-    <div class="views">
-      <div class="view view-main">
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="center sliding">红茶实验室</div>
-            <div class="right">
-              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
-            </div>
-          </div>
+        <div class="content-block">
+            <p>Right panel content goes here</p>
         </div>
-        <div class="pages navbar-through toolbar-through">
-          <div id="index_page" data-page="index" class="page">
-            <div class="page-content">
-              <div class="content-block-title">Welcome To My Awesome App</div>
-              <div class="content-block">
-                <div class="content-block-inner">
-                  <p>Couple of worlds here because my app is so awesome!</p>
-                  <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
-                  </div>
-              </div>
+    </div>
+    <div class="views tabs toolbar-through">
+        <div id="tool_view" class="view tab">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center sliding">工具</div>
+                </div>
             </div>
-          </div>
-          <div id="me_page" data-page="me" class="page">
-            <div class="page-content">
-                <div class="content-block-title">作者信息</div>
-                <div class="card facebook-card">
-                    <div class="card-header no-border">
-                        <div class="facebook-avatar"><img width="34" height="34" src="./static/img/logo.png"></div>
-                        <div class="facebook-name">茶几</div>
-                        <div class="facebook-date">于1987年5月8日出生</div>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-content-inner">
-                            <p>
-                              攻击力：472
-                              防御力：424
-                            </p>
-                            <!-- <img src="./static/img/logo.png" width="100%"> -->
-                            <p class="color-gray">Likes: 112 Comments: 43</p>
+            <div class="pages navbar-through">
+                <div id="photo_page" data-page="photo" class="page">
+                    <div class="page-content">
+                        <div class="card ks-facebook-card">
+                            <div class="card-content">
+                                <div class="card-content-inner">
+                                    <img data-src="./static/img/11.jpg" width="100%" class="lazy lazy-fadeIn">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="link">关系</a>
-                        <a href="#" class="link">履历</a>
-                        <a href="#" class="link">分享</a>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-        <div class="toolbar tabbar tabbar-labels">
-            <div class="toolbar-inner">
-                <a href="#index_page" class="tab-link active">
-                    <i class="icon fa fa-archive fa-2x"></i>
-                    <span class="tabbar-label">工具</span>
-                </a>
-                <a href="#tab2" class="tab-link">
-                    <i class="icon fa fa-heart fa-2x">
-                        <span class="badge bg-red">5</span>
-                    </i>
-                    <span class="tabbar-label">推荐</span>
-                </a>
-                <a href="#tab3" class="tab-link">
-                    <i class="icon fa fa-calendar fa-2x"></i>
-                    <span class="tabbar-label">近况</span>
-                </a>
-                <a href="#tab4" class="tab-link">
-                    <i class="icon fa fa-cube fa-2x"></i>
-                    <span class="tabbar-label">项目</span>
-                </a>
-                <a href="#me_page" class="tab-link">
-                    <i class="icon fa fa-user-secret fa-2x"></i>
-                    <span class="tabbar-label">我的</span>
-                </a>
+        <div id="collect_view" class="view tab">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center sliding">推荐</div>
+                </div>
+            </div>
+            <div class="pages navbar-through">
+                <div id="photo_page" data-page="photo" class="page">
+                    <div class="page-content">
+                        <div class="card ks-facebook-card">
+                            <div class="card-content">
+                                <div class="card-content-inner">
+                                    <img data-src="./static/img/11.jpg" width="100%" class="lazy lazy-fadeIn">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
+        <div id="index_view" class="view tab active">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center sliding">近况</div>
+                </div>
+            </div>
+            <div class="pages navbar-through">
+                <div id="index_page" data-page="index" class="page">
+                    <div class="page-content">
+                        <div class="content-block-title">Welcome To My Awesome App</div>
+                        <div class="content-block">
+                            <div class="content-block-inner">
+                                <p>Couple of worlds here because my app is so awesome!</p>
+                                <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="project_view" class="view tab">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center sliding">项目</div>
+                </div>
+            </div>
+            <div class="pages navbar-through">
+                <div id="project_page" data-page="project" class="page">
+                    <div class="page-content">
+                        <div class="content-block-title">主要项目</div>
+                        <div class="list-block">
+                            <ul>
+                                <li>
+                                    <a href="form.html" class="item-link">
+                                        <div class="item-content">
+                                            <div class="item-media"><i class="icon fa fa-money fa-2x"></i></div>
+                                            <div class="item-inner">
+                                                <div class="item-title">贷款管理</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="me_view" class="view tab">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center sliding">我的</div>
+                    <div class="right">
+                        <!-- Right link contains only icon - additional "icon-only" class-->
+                        <!-- <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="pages navbar-through">
+                <div id="me_page" data-page="me" class="page">
+                    <div class="page-content">
+                        <div class="content-block-title">作者信息</div>
+                        <div class="card facebook-card">
+                            <div class="card-header no-border">
+                                <div class="facebook-avatar"><img width="34" height="34" src="./static/img/logo.png"></div>
+                                <div class="facebook-name">茶几</div>
+                                <div class="facebook-date">于1987年5月8日出生</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-content-inner">
+                                <div id="echarts" style="width:100%;height:300px;"></div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="link">关系</a>
+                                <a href="#" class="link">履历</a>
+                                <a href="#" class="link">分享</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="toolbar tabbar tabbar-labels">
+        <div class="toolbar-inner">
+            <a href="#tool_view" class="tab-link">
+                <i class="icon fa fa-archive fa-2x"></i>
+                <span class="tabbar-label">工具</span>
+            </a>
+            <a href="#collect_view" class="tab-link">
+                <i class="icon fa fa-heart fa-2x">
+                <span class="badge bg-red">5</span>
+            </i>
+                <span class="tabbar-label">推荐</span>
+            </a>
+            <a href="#index_view" class="tab-link active">
+                <i class="icon fa fa-calendar fa-2x"></i>
+                <span class="tabbar-label">近况</span>
+            </a>
+            <a href="#project_view" class="tab-link">
+                <i class="icon fa fa-cube fa-2x"></i>
+                <span class="tabbar-label">项目</span>
+            </a>
+            <a href="#me_view" class="tab-link">
+                <i class="icon fa fa-user-secret fa-2x"></i>
+                <span class="tabbar-label">我的</span>
+            </a>
+        </div>
     </div>
-    <script type="text/javascript" src="./static/lib/framework7.min.js"></script>
+    </div>
+    <script type="text/javascript" src="./static/lib/framework7.js"></script>
     <script type="text/javascript" src="./static/lib/framework7.3dpanels.min.js"></script>
+    <script type="text/javascript" src="./static/lib/echarts.min.js"></script>
     <script type="text/javascript" src="./static/js/index.js"></script>
-  </body>
+</body>
+
 </html>
