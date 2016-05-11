@@ -54,6 +54,8 @@ $$('#me_view').on('show', function(e){
 })
 
 
+
+
 // $$(document).on('pageReinit', function (e) {
 // 	console.log(e);
 //   // Do something here when page loaded and initialized
