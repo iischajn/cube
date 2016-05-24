@@ -32,9 +32,12 @@ $$('#me_view').on('show', function(e){
 		var option = {
 		    radar: {
 		        indicator: [
-		           { name: '资产', max: 100},
-		           { name: '问题', max: 100},
-		           { name: '心态', max: 100}
+		           { name: '科技', max: 100},
+		           { name: '自然', max: 100},
+		           { name: '经济', max: 100},
+		           { name: '娱乐', max: 100},
+		           { name: '文艺', max: 100},
+		           { name: '教育', max: 100}
 		        ]
 		    },
 		    series: [{
@@ -42,8 +45,8 @@ $$('#me_view').on('show', function(e){
 		        areaStyle: {normal: {}},
 		        data : [
 		            {
-		                value : [0, 50, 80],
-		                name : '现实'
+		                value : [75, 90, 50, 20, 50, 40],
+		                name : '2015-06'
 		            }
 		        ]
 		    }]
